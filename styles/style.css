@@ -1,1 +1,77 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+
+.arima {
+    font-family: "Arima", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    color: #fafafa;
+}
+
+header{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100dvw;
+    & #icon{
+        margin-left: 20px;
+        width: 105px;
+        height: 105px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    & #links{
+        margin-right: 20px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-family: "arima";
+        font-size: 2.5ch;
+        text-shadow: 0px 4px 6px rgba(0, 0, 0, .9);  
+    }
+    
+    & li:hover{
+        cursor: pointer;
+    }
+}
+
+#home{
+    display: flex;
+    width: 100dvw;
+    & .introPic{
+        height: 100dvh;
+        width: 33.33%;
+    }
+
+    & #introPic1{
+        background-color: red;   
+    }
+
+    & #introPic2{
+        background-color: green;   
+    }
+
+    & #introPic3{
+        background-color: blue;   
+    }
+}
