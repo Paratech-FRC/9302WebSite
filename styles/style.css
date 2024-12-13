@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -225,5 +229,33 @@ header{
     align-items: center;
     justify-content: space-evenly;
     margin: 5dvh 0dvh;
+    & img:hover{
+        cursor: pointer;
+    }
+}
 
+.none{
+    display: none;
+}
+
+.upArrow{
+    width: 2.3dvw;
+    height: 2.3dvw;
+    background-color: rgba(17, 41, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Alatsi";
+    font-size: 100%;
+    position: absolute;
+    align-self: flex-end;
+    bottom: 15px;
+    right: 15px;
+    border: 3px solid #fafafa;
+    transition: all .2s ease-out;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(10, 22, 133);
+        border: 3px solid #ddd;
+    }
 }
