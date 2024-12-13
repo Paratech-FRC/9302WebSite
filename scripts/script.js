@@ -6,7 +6,7 @@ const hashs = ["#home", "#aboutSect", "#first", "#support"];
 const socialMedias = ["https://instagram.com/paratech_frc", "https://www.youtube.com/channel/UCNsUJjyZ31q5Pk860c-blGg"];
 const supportsMedias = ["https://www.sesipa.org.br/", "https://www.fiepa.org.br/"]
 const scrollTarget = 300;
-const upArrow = document.createElement("div");
+const upArrow = document.querySelector("#upArrow");
 
 icon.addEventListener("click", () => {
     window.location.hash = "#"
@@ -30,11 +30,16 @@ supports.forEach((support, index) => {
     })
 });
 
-if (scrollY > scrollTarget){
-    document.body.appendChild(upArrow);
-    upArrow.classList.add("upArrow");
-    upArrow.classList.remove("none");
-} else{
-    upArrow.classList.remove("upArrow");
-    upArrow.classList.add("none");
-}
+setInterval(() => {
+    if (scrollY > scrollTarget){
+        upArrow.classList.add("upArrow");
+        upArrow.classList.remove("none");
+    } else{
+        upArrow.classList.remove("upArrow");
+        upArrow.classList.add("none");
+    }
+})
+
+upArrow.addEventListener("click", () => {
+    window.location.hash = "#home";
+});

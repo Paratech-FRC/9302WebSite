@@ -247,7 +247,7 @@ header{
     justify-content: center;
     font-family: "Alatsi";
     font-size: 100%;
-    position: absolute;
+    position: fixed;
     align-self: flex-end;
     bottom: 15px;
     right: 15px;
