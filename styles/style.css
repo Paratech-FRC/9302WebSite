@@ -120,7 +120,7 @@ header{
     }
     & img{
         width: 47dvw;
-        height: 70dvh;
+        height: 39dvw;
     }
     & #aboutText{
         font-family: "Alata";
@@ -219,7 +219,7 @@ header{
     }
     & img{
         width: 55dvw;
-        height: 70dvh;
+        height: 30dvw;
     }
 }
 
@@ -257,5 +257,239 @@ header{
         cursor: pointer;
         background-color: rgb(10, 22, 133);
         border: 3px solid #ddd;
+    }
+}
+
+
+
+@media screen and (max-width:767px) {
+    .burguer{
+        background-color: transparent;
+        width: 14dvw;
+        height: 14dvw;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: space-around;
+
+        & .bgBar{
+            width: 100%;
+            height: 25%;
+            border-radius: 100px;
+            transition: all .3s ease-out;
+        }
+    }
+
+    .burguerClose{
+        & .bgBar{
+            background-color: #ff0040;
+        }
+        & #divBg2{
+            transform: translateX(35px);
+            background-color: transparent;
+        }
+        & #divBg1{
+            transform: rotate(-45deg) translate(-10px, 25px);
+        }
+        & #divBg3{
+            transform: rotate(45deg) translate(-5px, -18px);
+        }
+    }
+
+    .burguerOpen .bgBar{
+        background-color: #fafafa;
+        transform: translate(0);
+    }
+    header{
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    
+        & #links{
+            list-style: none;
+            display: flex;
+            flex-flow: column wrap;
+            gap: 18px;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-family: "arima";
+            font-size: 2.2ch;
+            text-shadow: 0px 4px 6px rgba(0, 0, 0, .9);
+            transition: all .3s;
+            opacity: 0;
+        }
+    }
+    
+    #home{
+        display: flex;
+        width: 100%;
+        & .introPic{
+            height: 100dvh;
+            width: 100%;
+        }
+    
+        & #introPic3{
+            background: url("../images/backgroundRight.jpg");
+            background-position: 63% center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    
+    #aboutSect{
+
+        & #leftVector{
+            width: 0;
+            height: 0;
+            border-left: 0 solid transparent;
+            border-bottom: 10dvh solid #fafafa;
+            border-right: 25dvw solid transparent;
+            transform: scaleX(-1) rotate(180deg);
+        } 
+        & #aboutMain{
+            font-family: "Alatsi";
+            font-size: 3ch;
+            font-weight: 400;
+            margin-top: -3%;
+            color: #0B6DFF;
+        }
+        & #rightVector{
+            width: 0;
+            height: 0;
+            border-left: 0 solid transparent;
+            border-bottom: 10dvh solid #fafafa;
+            border-right: 25dvw solid transparent;
+            transform: rotate(180deg);
+        }
+        & article{
+            margin-top: 60px;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            gap: 25px;
+        }
+        & img{
+            width: 100dvw;
+            height: 63dvw;
+        }
+        & #aboutText{
+            font-family: "Alata";
+            font-size: 1.9ch;
+            width: 94dvw;
+            align-self: center;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            
+            & ul{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                gap: 15dvw;
+                align-items: center;
+                margin-bottom: 5dvh;
+                & .sociais{
+                    width: 20dvw;
+                    height: 20dvw;
+                    border-radius: 20px;
+                    transition: all .2s ease-out;
+                    background-color: rgba(17, 41, 255, 1);
+                }
+                & #media1 div{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: url("../images/instagram-icon.svg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    filter: invert(1);
+                }
+                & #media2 div{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: url("../images/youtube-icon.svg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+    
+    .content{
+        background-color: #2a2a2a;
+        width: 100%;
+        height: 25dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        & #first{
+            background: url("../images/FIRST_HorzRGB_reverse.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 70%;
+        }
+        & #support{
+            font-family: "Alatsi";
+            font-size: 4ch;
+            font-weight: 400;
+            color: #0B6DFF;
+        }
+    }
+    
+    #firstSect{
+        & article{
+            display: flex;
+            flex-flow: column-reverse wrap;
+            align-items: center;
+        }
+        & #aboutFirst{
+            max-width: 94dvw;
+            font-family: "Alata";
+            font-size: 1.9ch;
+            text-align: justify;
+        }
+        & img{
+            width: 100dvw;
+            height: 63dvw;
+        }
+    }
+    
+    #supSect{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .upArrow{
+        width: 7dvw;
+        height: 7dvw;
+        background-color: rgba(17, 41, 255, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Alatsi";
+        font-size: 140%;
+        position: fixed;
+        align-self: flex-end;
+        bottom: 15px;
+        right: 15px;
+        border: 3px solid #fafafa;
     }
 }
