@@ -83,5 +83,5 @@ setInterval(() => {// Cria aquela setinha no canto da tela pra voltar pro home
 })
 
 upArrow.addEventListener("click", () => {// Aqui verifica o click na seta que eu falei ali em cima;
-    window.location.hash = "#home";
+    window.location.hash = "#";
 })
